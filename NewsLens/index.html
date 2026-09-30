@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NewsLens</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="top"><b><i class="lens"></i>NewsLens</b><span>Claims, evidence, doubt and missing context in any article</span></header>
+<div class="app">
+  <div id="editor">
+      <div class="hero" aria-hidden="true">
+        <h2>What is this story <em>really</em> made of?</h2>
+        <p>Paste any article and NewsLens marks every claim, every scrap of evidence, every hedge and every source you can't check.</p>
+        <div class="chips"><span class="chp"><i style="background:#a80873"></i>Claims</span><span class="chp"><i style="background:#62f58e"></i>Evidence</span><span class="chp"><i style="background:#2b9724"></i>Hedges</span><span class="chp"><i style="background:transparent;border:1.5px dashed #a80873"></i>Vague sources</span></div>
+      </div>
+      <textarea id="txt" aria-label="Article text"></textarea>
+      <div class="bar"><button class="pri" id="go">Analyze</button><button class="sec" id="sample" type="button">Use sample</button><button class="sec" id="clear" type="button">Clear</button><span class="wc" id="wc">0 words</span></div>
+    </div>
+  <div class="dash" id="dash" hidden>
+    <section class="verdict" id="p-verdict"></section>
+    <section class="pn" id="p-article" style="--pc:var(--side);--pt:var(--ink)"><header><h2>Article</h2><button class="sec" id="edit" type="button">← Edit</button><span class="prog" id="prog"></span><div class="legend" id="legend"></div></header><article id="art"></article></section>
+    <section class="pn" id="p-claims" style="--pc:#a80873;--pt:#fff"><header><h2>Claims</h2><span class="cnt">0</span></header><div class="pb"></div></section>
+    <section class="pn" id="p-evidence" style="--pc:#2b9724;--pt:#fff"><header><h2>Evidence</h2><span class="cnt">0</span></header><div class="pb"></div></section>
+    <section class="pn" id="p-doubt" style="--pc:#62f58e;--pt:#363b1b"><header><h2>Doubt</h2><span class="cnt">0</span></header><div class="pb"></div></section>
+    <section class="pn" id="p-context" style="--pc:#363b1b;--pt:#b8fdfb"><header><h2>Missing context</h2><span class="cnt">0</span></header><div class="pb"></div></section>
+  </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
